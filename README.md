@@ -1,19 +1,47 @@
-# Assign mentor for students
+# Mentor Assigning API
 
-All endpoints are list below, you can use the postman documentation for more clear output.
+This API facilitates the assignment of mentors to students and provides various functionalities related to mentor-student relationships. The endpoints are detailed below. For a more clear output, please refer to the [Postman Documentation](https://documenter.getpostman.com/view/30441359/2s9YRB3XnQ).
 
-Please check the postman documentation link - https://documenter.getpostman.com/view/30441359/2s9YRB3XnQ
+## Endpoints
 
-This is a Mentor Assigning API.
+### Create Mentor
 
-It can create a mentor when entering the mentorName. The endpoint is /mentor.
+- **Endpoint:** `POST /mentor`
+- **Description:** Creates a mentor when providing the mentorName.
 
-It can create a student when entering the studentName. The endpoint is /student.
+### Create Student
 
-It can assign an array of students to a mentor, when entering the mentorName and the array of students. The endpoint is /mentor/assignStudentsToMentor.
+- **Endpoint:** `POST /student`
+- **Description:** Creates a student when providing the studentName.
 
-It can assign or change a mentor for a student, when enterng the studentName and the mentorName. The endpoint is /student/assignChangeMentorforStudent.
+### Assign Students to Mentor
 
-It can show all the students of a particular mentor. The endpoint is /mentor/particulerMentorStudents.
+- **Endpoint:** `POST /mentor/assignStudentsToMentor`
+- **Description:** Assigns an array of students to a mentor when providing the mentorName and the array of students.
 
-It can show the previous mentor of a specific student. The endpoint is /student/previousMentor
+### Assign or Change Mentor for Student
+
+- **Endpoint:** `POST /student/assignChangeMentorforStudent`
+- **Description:** Assigns or changes a mentor for a student when providing the studentName and the mentorName.
+
+### Show All Students of a Particular Mentor
+
+- **Endpoint:** `GET /mentor/particularMentorStudents`
+- **Description:** Displays all the students of a particular mentor when providing the mentorName.
+
+### Show Previous Mentor of a Specific Student
+
+- **Endpoint:** `GET /student/previousMentor`
+- **Description:** Displays the previous mentor of a specific student when providing the studentName.
+
+## Technologies Used
+
+- Backend: Expressjs
+- Database: MongoDB
+
+## Usage:
+
+1. To get started with the Restaurant Website:
+   ```bash
+   git clone https://github.com/Emmanuel-Benjamin00/assign-mentor
+
